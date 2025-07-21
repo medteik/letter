@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>My Love Letter</title>
+  <style>
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #ffeaea;
+  font-family: 'Georgia', serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.container {
+  text-align: center;
+  padding: 20px;
+}
+
+.heart {
+  font-size: 48px;
+  color: red;
+  animation: pulse 1.2s infinite;
+  margin-bottom: 20px;
+}
+
+.letter {
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 500px;
+  margin: 0 auto;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  line-height: 1.7;
+  box-shadow: 20px 15px 0px beige
+}
+
+h1 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #b30059;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+  </style>
+  <audio control autoplay loop src="In the forest's gentle hush, where sunlight filters through, The wo....mp3"></audio>
+</head>
+<body>
+  <div class="container">
+    <div class="heart">&#10084;</div>
+    <div class="letter">
+      <h1>To My Dearest,</h1>
+      <p>
+        And even after all I said; after the silence, the space, and the letting go—there’s still one truth I didn’t say out loud enough: I will always love you. Not in the way that waits by the door or checks the phone hoping to see your name. Not in the way that interrupts your life or tries to pull you back. But in the quiet, steady way that love sometimes stays, even after everything else fades. It’s the kind of love that no longer begs to be seen but gently lingers; in songs, in passing memories, in quiet nights where I catch myself remembering the way things once felt. Even after goodbye, that love didn’t disappear. It simply changed its shape. It softened. It became still. It stopped reaching outward but never stopped existing. I may no longer reach for you, but a part of me still carries what we had, the comfort, the laughter, the little things that made the world feel more right when you were in it. That doesn’t mean I haven’t moved forward. I am healing. I am growing. But healing doesn’t mean forgetting. It means learning how to carry something beautiful, even when it’s no longer yours. And somewhere deep inside, there's still a small, quiet wish; one I never say too loudly—that maybe someday, if the timing is kinder, we’ll find our way back to each other. So no matter how far we drift or how different our lives become, I hope you know this: I loved you. I still do, in my own quiet way. And maybe, I always will. 
+      </p>
+      <p>
+        Yours forever,  
+        <br><strong>Me</strong>
+      </p>
+    </div>
+  </div>
+<!-- Code injected by live-server -->
+<script>
+	// <![CDATA[  <-- For SVG support
+	if ('WebSocket' in window) {
+		(function () {
+			function refreshCSS() {
+				var sheets = [].slice.call(document.getElementsByTagName("link"));
+				var head = document.getElementsByTagName("head")[0];
+				for (var i = 0; i < sheets.length; ++i) {
+					var elem = sheets[i];
+					var parent = elem.parentElement || head;
+					parent.removeChild(elem);
+					var rel = elem.rel;
+					if (elem.href && typeof rel != "string" || rel.length == 0 || rel.toLowerCase() == "stylesheet") {
+						var url = elem.href.replace(/(&|\?)_cacheOverride=\d+/, '');
+						elem.href = url + (url.indexOf('?') >= 0 ? '&' : '?') + '_cacheOverride=' + (new Date().valueOf());
+					}
+					parent.appendChild(elem);
+				}
+			}
+			var protocol = window.location.protocol === 'http:' ? 'ws://' : 'wss://';
+			var address = protocol + window.location.host + window.location.pathname + '/ws';
+			var socket = new WebSocket(address);
+			socket.onmessage = function (msg) {
+				if (msg.data == 'reload') window.location.reload();
+				else if (msg.data == 'refreshcss') refreshCSS();
+			};
+			if (sessionStorage && !sessionStorage.getItem('IsThisFirstTime_Log_From_LiveServer')) {
+				console.log('Live reload enabled.');
+				sessionStorage.setItem('IsThisFirstTime_Log_From_LiveServer', true);
+			}
+		})();
+	}
+	else {
+		console.error('Upgrade your browser. This Browser is NOT supported WebSocket for Live-Reloading.');
+	}
+	// ]]>
+</script>
+
+
+</body></html>

@@ -3,8 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>My Love Letter</title>
+  <title>My Letter</title>
+
+  <!-- Custom handwritten font -->
   <link href="https://fonts.googleapis.com/css2?family=Winky+Rough:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
+
   <style>
     * {
       margin: 0;
@@ -13,145 +16,125 @@
     }
 
     body {
-      height: 100vh;
-      background: linear-gradient(to bottom right, #ffeaea, #fff3f0, #f3e8ff);
-      font-family: 'Georgia', serif;
-      color: #333;
+      background: linear-gradient(to bottom right, #ffeef3, #fff7fa);
+      font-family: 'Winky Rough', cursive;
+      color: #5a2a2a;
       display: flex;
       justify-content: center;
       align-items: center;
-      overflow: hidden;
-      position: relative;
+      min-height: 100vh;
+      padding: 20px;
     }
 
     .container {
-      text-align: center;
-      padding: 20px;
-      z-index: 2;
-      animation: fadeIn 1.5s ease-in-out forwards;
-      opacity: 0;
-    }
-
-    .heart {
-      font-size: 48px;
-      color: red;
-      animation: pulse 1.2s infinite;
-      margin-bottom: 20px;
+      background: #fffaf0;
+      border: 2px solid #ffd6d6;
+      padding: 30px 20px;
+      border-radius: 20px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      max-width: 600px;
+      width: 100%;
+      position: relative;
+      overflow-y: auto;
+      max-height: 90vh;
+      animation: fadeIn 1.5s ease;
     }
 
     .letter {
-      background: #fffdf5;
-      padding: 30px;
-      border-radius: 12px;
-      max-width: 500px;
-      max-height: 75vh;
-      margin: 0 auto;
-      box-shadow: 20px 15px 0px #f0e0b0;
-      overflow-y: auto;
-      line-height: 1.7;
-      font-family: "Winky Rough", cursive;
-      font-weight: 400;
-      font-size: 1.05rem;
-      border: 1px solid #e7dcb9;
+      white-space: pre-wrap;
+      line-height: 1.8;
+      font-size: 18px;
     }
 
-    h1 {
-      font-family: 'Georgia', serif;
-      font-size: 28px;
-      margin-bottom: 20px;
-      color: #b30059;
-    }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.15); }
-      100% { transform: scale(1); }
+    /* Sakura-like petal background (static) */
+    body::before {
+      content: "";
+      position: fixed;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: url('https://i.imgur.com/1oRFL94.png') repeat;
+      opacity: 0.07;
+      pointer-events: none;
+      z-index: 0;
     }
 
     @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    .petal {
-      position: absolute;
-      top: -50px;
-      font-size: 24px;
-      color: #fbb1c8;
-      animation: fall 8s linear infinite;
-      opacity: 0.7;
+    .quote-button {
+      margin-top: 20px;
+      padding: 10px 20px;
+      background-color: #ffc0cb;
+      color: #b30059;
+      border: none;
+      border-radius: 20px;
+      font-size: 16px;
+      font-family: 'Georgia', serif;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
     }
 
-    @keyframes fall {
-      0% {
-        transform: translateY(0) rotate(0deg);
-        opacity: 0;
-      }
-      10% { opacity: 0.8; }
-      100% {
-        transform: translateY(100vh) rotate(360deg);
-        opacity: 0;
-      }
+    .quote-button:hover {
+      background-color: #fbaac4;
     }
 
-    /* Optional scrollbar styling */
-    .letter::-webkit-scrollbar {
-      width: 8px;
+    .hidden-quote {
+      opacity: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: all 1s ease;
+      font-style: italic;
+      margin-top: 20px;
+      color: #b30059;
+      font-size: 18px;
+      padding: 0 20px;
     }
-    .letter::-webkit-scrollbar-thumb {
-      background-color: #e3c9aa;
-      border-radius: 4px;
+
+    .hidden-quote.show {
+      opacity: 1;
+      max-height: 200px;
     }
-    .letter::-webkit-scrollbar-track {
-      background-color: #f5f0e6;
+
+    @media (max-width: 600px) {
+      .letter {
+        font-size: 16px;
+      }
+
+      .container {
+        padding: 20px 15px;
+      }
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <div class="heart">&#10084;</div>
     <div class="letter">
-      <h1>To My Dearest,</h1>
-      <p>
-        And even after all I said; after the silence, the space, and the letting go—there’s still one truth I didn’t say out loud enough: I will always love you. Not in the way that waits by the door or checks the phone hoping to see your name. Not in the way that interrupts your life or tries to pull you back. But in the quiet, steady way that love sometimes stays, even after everything else fades.
-      </p>
-      <p>
-        It’s the kind of love that no longer begs to be seen but gently lingers; in songs, in passing memories, in quiet nights where I catch myself remembering the way things once felt. Even after goodbye, that love didn’t disappear. It simply changed its shape. It softened. It became still. It stopped reaching outward but never stopped existing.
-      </p>
-      <p>
-        I may no longer reach for you, but a part of me still carries what we had, the comfort, the laughter, the little things that made the world feel more right when you were in it. That doesn’t mean I haven’t moved forward. I am healing. I am growing. But healing doesn’t mean forgetting. It means learning how to carry something beautiful, even when it’s no longer yours.
-      </p>
-      <p>
-        And somewhere deep inside, there's still a small, quiet wish; one I never say too loudly—that maybe someday, if the timing is kinder, we’ll find our way back to each other.
-      </p>
-      <p>
-        So no matter how far we drift or how different our lives become, I hope you know this: I loved you. I still do, in my own quiet way. And maybe, I always will. 
-      </p>
-      <p>
-        Yours forever,  
-        <br><strong>Me</strong>
-      </p>
+      Dear You,
+
+      In this quiet corner of the world, I’ve written something just for you.
+      With every word, I’ve tried to capture a piece of what my heart wanted to say—softly, simply, sincerely.
+
+      I hope when you read this, you feel warm, understood, and remembered.
+      This letter may not be perfect, but it is true.
+
+      —From me, always.
     </div>
+
+    <!-- Reveal Quote Button -->
+    <button class="quote-button" onclick="revealQuote()">Reveal a Quote</button>
+
+    <!-- Hidden Quote -->
+    <p id="quote" class="hidden-quote">
+      “You were a chapter I never wanted to end—even if the story moved on. I love you to infinity and beyond :)”
+    </p>
   </div>
 
   <script>
-    // Create sakura petals
-    const createPetal = () => {
-      const petal = document.createElement("div");
-      petal.classList.add("petal");
-      petal.innerText = "🌸";
-      petal.style.left = Math.random() * 100 + "vw";
-      petal.style.animationDuration = 6 + Math.random() * 4 + "s";
-      petal.style.fontSize = 20 + Math.random() * 10 + "px";
-      document.body.appendChild(petal);
-
-      setTimeout(() => {
-        petal.remove();
-      }, 10000);
-    };
-
-    setInterval(createPetal, 400);
+    function revealQuote() {
+      document.getElementById("quote").classList.add("show");
+    }
   </script>
 </body>
 </html>
